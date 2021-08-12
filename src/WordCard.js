@@ -29,7 +29,9 @@ export default function WordCard(props){
                 alert("You win!!!")
                 console.log('yeah!')
                 setState({...state, guess: '', completed: true})
+                setState({...state, guess: '', attempt: state.attempt + 1})
                 }else{
+                alert("Try again")
                 console.log('reset')
                 setState({...state, guess: '', attempt: state.attempt + 1})
                 }
