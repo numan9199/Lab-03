@@ -38,13 +38,17 @@ export default function WordCard(props){
                
         }
         console.log(guess)
+        
     }
+    function handleclick(){setState({...state, guess: '', attempt: state.attempt + 1})}
     return (
         <div>
             { 
                 state.chars.map((c, i) => <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt = {state.attempt}/>
                 )
+
             }
+            <br /><button onClick = {handleclick}>Reset</button>
         </div>
     );
 }
